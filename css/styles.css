@@ -141,9 +141,6 @@ img {
     max-width: 320px;
     padding: 0 16px;
     margin: 0 auto;
-
-    /* width: 1158px;
-    padding: 0 15px; */
 }
 
 /* Tablet screen */
@@ -218,18 +215,6 @@ img {
     align-items: center;
 }
 
-@media screen and (min-width: 768px) {
-    .nav {
-        margin-right: 120px;
-    }
-}
-
-@media screen and (min-width: 1158px) {
-    .nav {
-        margin-right: 76px;
-    }
-}
-
 .nav-link {
     position: relative;
 }
@@ -270,7 +255,6 @@ img {
     }
 }
 
-.nav-item {}
 
 .nav-link {
     font-weight: 500;
@@ -287,15 +271,15 @@ img {
     color: #404bbf;
 }
 
-address {
-    margin-left: auto;
+
+@media screen and (max-width: 767px) {
+    .header-adress {
+        display: none;
+    }
 }
 
-.header-adress {}
-
-
-.header-list {
-    display: none;
+.header-adress {
+    margin-left: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -315,8 +299,6 @@ address {
         gap: 40px;
     }
 }
-
-.header-item {}
 
 .header-adress-link {
     font-family: inherit;
@@ -344,6 +326,7 @@ address {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: auto;
 }
 
 .burger-btn-icon {
@@ -351,12 +334,6 @@ address {
 }
 
 @media screen and (min-width: 768px) {
-    .burger-btn {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 1158px) {
     .burger-btn {
         display: none;
     }
@@ -419,18 +396,6 @@ screen and (min-width: 1158px) and (min-resolution: 2dppx) {
     }
 }
 
-.hero-container {
-    /* width: 100%;
-    background-color: #2e2f42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/heroback/Dark-bg_mob@1x.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-right: auto;
-    margin-left: auto; */
-}
-
 
 .hero-heading {
     font-weight: 700;
@@ -441,6 +406,8 @@ screen and (min-width: 1158px) and (min-resolution: 2dppx) {
     color: #fff;
     max-width: 216px;
     margin-bottom: 72px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -456,8 +423,6 @@ screen and (min-width: 1158px) and (min-resolution: 2dppx) {
     .hero-heading {
         max-width: 496px;
         margin-bottom: 48px;
-        margin-right: auto;
-        margin-left: auto;
     }
 }
 
@@ -564,9 +529,6 @@ screen and (min-width: 1158px) and (min-resolution: 2dppx) {
 }
 
 
-.features-text {}
-
-
 .team {
     background-color: #f4f4fd;
     padding-top: 96px;
@@ -580,7 +542,6 @@ screen and (min-width: 1158px) and (min-resolution: 2dppx) {
     }
 }
 
-.team-container {}
 
 .team-title {
     margin-bottom: 72px;
@@ -749,7 +710,7 @@ screen and (min-width: 1158px) and (min-resolution: 2dppx) {
 }
 
 .portfolio-item {
-    max-width: 288px;
+    width: 288px;
     width: 100%;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: box-shadow;
@@ -839,6 +800,8 @@ screen and (min-width: 1158px) and (min-resolution: 2dppx) {
     .footer {
         padding-top: 100px;
         padding-bottom: 100px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -866,6 +829,7 @@ screen and (min-width: 1158px) and (min-resolution: 2dppx) {
         display: flex;
         flex-wrap: nowrap;
         align-items: baseline;
+        padding-left: 0;
     }
 }
 
@@ -1058,6 +1022,12 @@ screen and (min-width: 1158px) and (min-resolution: 2dppx) {
     line-height: 2;
     letter-spacing: 0.04em;
     color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-modal-form-input {
+        width: 264px;
+    }
 }
 
 .footer-modal-form-input::placeholder {
@@ -1328,7 +1298,7 @@ input[type='checkbox']:focus-visible+.modal-form-agreement-text .modal-form-chec
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 72px 16px 40px 16px;
+    padding: 72px 16px 40px;
     background-color: #fff;
 
     display: flex;
@@ -1362,7 +1332,7 @@ input[type='checkbox']:focus-visible+.modal-form-agreement-text .modal-form-chec
     align-items: center;
 }
 
-.menu-nav-item {
+.menu-nav-item:not(:last-child) {
     margin-bottom: 40px;
 }
 
@@ -1398,14 +1368,18 @@ input[type='checkbox']:focus-visible+.modal-form-agreement-text .modal-form-chec
     color: #404bbf;
 }
 
-.menu-socials-list {
-    gap: 40px;
-}
-
-.menu-adress-item {
+.phone-item {
     margin-bottom: 24px;
 }
 
+.menu-address {
+    margin-left: 0;
+    margin-top: auto;
+}
+
+
 .menu-socials-list {
     margin-top: 48px;
+    gap: 40px;
+    margin-top: auto;
 }
